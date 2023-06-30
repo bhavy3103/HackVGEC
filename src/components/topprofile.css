@@ -1,0 +1,41 @@
+.img222 {
+  width: 300px;
+   /* border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%; */
+  clip-path: circle();
+}
+
+.top-profile {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.profile-img-div {
+  margin-left: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.profile-intro {
+  margin: auto auto auto 40px;
+}
+
+.profile-name {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.profile-college {
+  font-weight: bolder;
+  font-size: 20px;
+  color: gray;
+}

@@ -1,0 +1,55 @@
+{
+  "userData": {
+    "name": "Barot Malhar",
+    "college": "Vishwakarma Government Engineering College",
+    "branch": "Information Technology",
+    "email": "malhar@gmail.com",
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8kQwDXkkHuchG6C79dp77oydelfollBLs52ez1dNh2Q&usqp=CAU&ec=48600112"
+  },
+  "achievement": [
+    {
+      "imageURL": "https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp",
+      "title": "TechXIT Winner 2022",
+      "description": "This is a wider card with supporting text below as a natural lead-into additional content. This content is a little bit longer.",
+      "link": "https://www.github.com"
+    },
+    {
+      "imageURL": "https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp",
+      "title": "GTU CodeStorm Winner 2022",
+      "description": "This is a wider card with supporting text below as a natural lead-into additional content. This content is a little bit longer.",
+      "link": "https://www.github.com"
+    },
+    {
+      "imageURL": "https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp",
+      "title": "HackVGEC Winner 2023",
+      "description": "This is a wider card with supporting text below as a natural lead-into additional content. This content is a little bit longer.",
+      "link": "https://www.github.com"
+    }
+  ],
+  "projects": [
+    {
+      "imageURL": "https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp",
+      "title": "C.V. Mate",
+      "description": "This is a wider card with supporting text below as a natural lead-into additional content. This content is a little bit longer.",
+      "link": "https://www.github.com"
+    }
+  ],
+  "experience": [
+    {
+      "imageURL": "https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp",
+      "title": "TOPS Technologies SDE Intern",
+      "description": "This is a wider card with supporting text below as a natural lead-into additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-into additional content. This content is a little bit longer.",
+      "link": "https://www.github.com",
+      "durationfrom": "May 2022",
+      "durationto": "July 2022"
+    },
+    {
+      "imageURL": "https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp",
+      "title": "Infosys SDE Intern",
+      "description": "This is a wider card with supporting text below as a natural lead-into additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-into additional content. This content is a little bit longer.",
+      "link": "https://www.github.com",
+      "durationfrom": "May 2021",
+      "durationto": "July 2021"
+    }
+  ]
+}
