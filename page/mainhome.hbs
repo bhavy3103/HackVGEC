@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{!-- <link rel="stylesheet" href="index.css"> --}}
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    height: 50px;
+    position: sticky;
+    top: 0px;
+    background-color: #241e54;
+    width: 100%;
+    z-index: 1000;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(56, 165, 238, 0.5);
+}
+
+.container{
+    max-width: 65rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.container2{
+    max-width: 65rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    left: 1000px;
+    top : -49px;
+}
+
+.logo-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: -230px;
+}
+
+.nav-btn{
+    flex: 3;
+    display: flex;
+}
+
+.nav-links{
+    flex: 2;
+}
+
+.logo{
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 3rem;
+}
+
+.logo span{
+    font-weight: 300;
+}
+
+.btn{
+    display: inline-block;
+    padding: .5rem 1.3rem;
+    font-size: .8rem;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    line-height: 1;
+    margin: 0 .2rem;
+    transition: .3s;
+    text-transform: uppercase;
+}
+
+.nav-links > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -800px;
+}
+
+.nav-link{
+    position: relative;
+}
+
+.nav-link > a{
+    line-height: 3rem;
+    color: #fff;
+    padding: 0 .6rem;
+    letter-spacing: 1px;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+
+.nav-link > a > i{
+    margin-left: .2rem;
+}
+
+.nav-link:hover > a{
+    transform: scale(1.1);
+}
+
+
+
+.nav-link:hover{
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* dropdown list */
+.dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10rem;
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.dropdown ul{
+    position: relative;
+}
+
+.dropdown-link > a{
+    display: flex;
+    background-color:  #241e54;
+    color: white;
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.dropdown-link:hover > a{
+    background-color: #3498db;
+    color:black;
+}
+
+.dropdown-link:not(:nth-last-child(2)){
+    border-bottom: 1px solid #efefef;
+}
+
+.dropdown-link i{
+    transform: rotate(-90deg);
+}
+
+.arrow{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: -5.5px;
+    left: 32px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: .3s;
+    z-index: -1;
+}
+
+.dropdown-link:first-child:hover ~ .arrow{
+    background-color: white;
+}
+
+.dropdown-link{
+    position: relative;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown{
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search{
+    margin-left:20px;
+    width: 150px;
+    height: 2rem;
+    margin-top: 8px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 80px;
+    left: 20px;
+}
+
+input{
+    background: transparent;
+    border: 0px;
+    outline: 0px;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: -22px;
+    display: flex;
+}
+
+.icon-search{
+     color: black;
+     margin-left: 110px;
+}
+
+
+/* image slider */
+.container1{
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    position: relative;
+}
+
+.container1 .image{
+    display: none;
+}
+
+.container1 .image img{
+    margin-top: 15px;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    /* border-radius: 15px; */
+    overflow: hidden;
+}
+
+.container1 .button{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+.container1 .button a{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    user-select: none;
+}
+
+.container1 .button .prev{
+    border-radius: 0 5px 5px 0;
+}
+
+.container1 .button .next{
+    border-radius: 5px 0 0 5px;
+}
+
+.dots{
+    text-align: center;
+    position: absolute;
+    bottom: 8px;
+    left: 45%;
+    padding: 5px 10px;
+    height: 30px;
+    border-radius: 15px;
+
+}
+
+.dot{
+    cursor: pointer;
+    height: 5px;
+    width: 10px;
+    border-radius: 50%;
+    background: white;
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.active, .dot:hover{
+    background: grey;
+}
+    </style>
+    <title>CV Home</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <h3 class="logo">CV<span>MATE</span></h3>
+            </div>
+
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="#">Home</a>
+                        </li>
+
+                        </li>
+                           
+                        <li class="nav-link" style="--i: 1.35s">
+                                <a href="#">About Us</a>
+                        </li>
+
+                        <li class="nav-link" style="--i: 1.1s">
+                                <a href="#">Contact Us</a>
+                       </li>
+                    </ul>
+                </div>
+                
+                <div class="search">
+                    <a href="#"><i class="fa fa-search icon-search"></i></a> 
+                    <input type="search" name="search_btn" id="search_btn" placeholder="Search it.">  
+                </div>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .85s">
+                            <a href="#">Login<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="/loginS">Student</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="/loginF">Faculty</a>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: .85s">
+                            <a href="#">Signup<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="/signupS">Student</a>
+                                    </li>
+                                    {{!-- <li class="dropdown-link">
+                                        <a href="/signupF">Faculty</a>
+                                    </li> --}}
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li> 
+                    </ul>
+                </div>
+            </div>              
+        </div>
+    </header>
+
+    <div class="container1">
+        <div class="image">
+            <img src="https://www.vgecg.ac.in/images/photoslider/image.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuP0PIA7DubOfRYl_5tdewhOd-gSeJWssK9cKQ7RdOcg&usqp=CAU&ec=48665701" alt="">
+        </div>
+        <div class="image">
+            <img src="https://www.vgecg.ac.in/images/event_photo/1652433544_220410%20IEEE%20FreshCode%202.0_1.png" alt="">
+        </div>
+        <div class="image">
+            <img src="../../Hackvgec//Hackvgec/vgec4.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../../Hackvgec/Hackvgec/vgec5.jpg" alt="">
+        </div>
+
+        <div class="button">
+            <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+            <a onclick="nextimg(1)" class="next">&#10095;</a>
+        </div>
+
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+        <div>
+            <p>CV Mate is a tool that helps job seekers to create professional-looking resumes or CVs (Curriculum Vitae) quickly and easily. It provides users with pre-designed templates and suggests relevant content for different job positions. With CV Mate, users can enter their personal information, work history, education, skills, and achievements into the template and generate a visually appealing resume that highlights their strengths and qualifications. The tool can also help users tailor their CV to specific job applications and track their job application progress. Overall, CV Mate streamlines the CV creation process and helps job seekers present themselves in the best possible way to potential
+                <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eum itaque accusamus ea culpa soluta? Dignissimos consectetur animi quod perspiciatis saepe adipisci rem optio deserunt culpa numquam repudiandae id non cumque officiis et debitis sit, pariatur harum, sequi minus earum doloremque? Numquam molestiae expedita, rem tenetur dolorum consequuntur mollitia error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, eos molestiae ex delectus deleniti doloribus neque voluptate asperiores, aperiam est animi numquam quidem, qui ut. Vitae corrupti incidunt nam, soluta modi cum voluptatem eos doloribus molestiae aliquid commodi rem aperiam.</p>
+        </div>
+        <script>
+            var imageno =1;
+displayimg(imageno);
+
+function nextimg(n){
+    displayimg(imageno += n)
+}
+
+function currentSlide(n){
+    displayimg(imageno = n)
+}
+
+function displayimg(n){
+    var i;
+    var image = document.getElementsByClassName("image");
+    var dots = document.getElementsByClassName("dot");
+
+    if(n > image.length){
+        imageno = 1;
+    }
+
+    if(n < 1){
+        imageno = image.length;
+    }
+
+    for(i=0; i < image.length; i++){
+        image[i].style.display = "none";
+    }
+
+    for(i=0; i < dots.length; i++){
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    image[imageno - 1].style.display ="block";
+    dots[imageno - 1].className += " active";
+
+}
+        </script>
+
+</body>
+</html>

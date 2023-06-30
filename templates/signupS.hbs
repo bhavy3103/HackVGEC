@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Center the form on the page */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Style the form header */
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Style the input fields */
+        input[type="text"],
+        input[type="number"],
+        input[type="password"] {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 1rem;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Style the submit button */
+        input[type="submit"] {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0062cc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Sign up Student</h2>
+    <form action="/signupS" method="post">
+
+        <input type="text" name="fname" placeholder="Firstname">
+        <br><br>
+        <input type="text" name="lname" placeholder="Lastname">
+        <br><br>
+        <input type="text" name="email" placeholder="Email id">
+        <br><br>
+        <input type="number" name="enroll" placeholder="Enrollment">
+        <br><br>
+        <input type="text" name="bname" placeholder="Branch name">
+        <br><br>
+        <input type="text" name="gen" placeholder="Gender">
+        <br><br>
+        <input type="text" name="uname" placeholder="Username">
+        <br><br>
+        <input type="password" name="pass" placeholder="Password">
+        <br>
+
+        {{!-- <input type="password" name="password" placeholder="Password"> --}}
+        {{!-- <input type="text"> --}}
+        <input type="submit">
+    </form>
+</body>
+
+</html>
